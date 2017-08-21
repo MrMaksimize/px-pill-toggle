@@ -5,7 +5,9 @@
 -->
 <link rel="import" href="../polymer/polymer.html"/>
 <link rel="import" href="../iron-label/iron-label.html"/>
+<link rel="import" href="../iron-icons/iron-icons.html"/>
 <link rel="import" href="../iron-checked-element-behavior/iron-checked-element-behavior.html">
+<link rel="import" href="../paper-button/paper-button.html">
 
 <link rel="import" href="css/px-toggle-styles.html">
 
@@ -24,8 +26,13 @@
 <dom-module id="px-toggle">
   <template>
     <style include="px-toggle-styles"></style>
-    <input type="checkbox" checked=[[checked]] aria-checked=[[checked]] id="checkbox" class$="toggle__input {{_checkInputSize(size)}}">
-    <iron-label for="checkbox" class$="toggle__label {{_checkLabelSize(size)}} {{_checkDisabledState(disabled)}}"></iron-label>
+    <ul class='rounded-toggle'>
+        <template is="dom-repeat" items="{{ items }}">
+            <li id="{{ item.key }}">
+                <paper-button id="{{ item.key }}" class="toggle__input" on-tap="onChangeSelect"> {{ item.val }}</paper-button>
+            </li>
+       </template>
+    </ul>
   </template>
 </dom-module>
 <script src="dist/px-toggle.js"></script>

@@ -33,7 +33,87 @@ $inuit-enable-toggle--large     : true;
 $inuit-enable-toggle--huge      : true;
 $inuit-enable-toggle--disabled  : true;
 
-@import "px-toggle-design/_objects.toggle.scss";
+paper-button {
+  min-width: auto;
+  background: transparent;
+  height: 25px;
+}
+li {
+  background: transparent;
+  list-style-type: none;
+  margin: 0px;
+  padding:0px;
+  padding-left:0px;
+  float: left;
+  color:#999;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border: 0px solid #800000;
+}
+li.active {
+  background: #ccc;
+  color: black;
+}
+
+ul {
+  background: black;
+  float:left;
+  margin:0px;
+  padding-left:0px;
+  padding-right: 0px;
+  border-radius: 30px;
+  -moz-border-radius: 30px;
+  -webkit-border-radius: 30px;
+  border: 0px solid #800000;
+}
+
+//@import "px-toggle-design/_objects.toggle.scss";
+/* Rounded toggle for filtering/modifying lists */
+
+/*.rounded-toggle {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 2px;
+  border-radius: 15px;
+  vertical-align: middle;
+  background: rgba(0,0,0,.1)
+}
+
+.dark .rounded-toggle { background: rgba(255,255,255,.1);}
+
+.rounded-toggle > * {
+  cursor:pointer;
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 16px;
+  padding: 3px 10px;
+  font-size: 12px;
+  color: rgba(0,0,0,0.5);
+  line-height: 20px;
+}
+
+.rounded-toggle > *:empty { padding-left: 5px; padding-right: 5px; }
+.rounded-toggle > *:hover { color: rgba(0,0,0,0.75); }
+.dark .rounded-toggle > * { color: white;}
+
+.dark .rounded-toggle *:hover { color: rgba(255,255,255,0.75); }
+
+//.rounded-toggle input[type=radio] { display:none; }
+
+.rounded-toggle input[type=radio]:checked + label,
+.rounded-toggle .active { background: blue; color: rgba(0,0,0,.5); }*/
+
+/*.short.rounded-toggle {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.rounded-toggle.short input[type=radio] + label,
+.rounded-toggle.short > * {
+  font-size: 10px;
+  padding:0 7px;
+}*/
 
 // Component
 
